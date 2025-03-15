@@ -17,11 +17,20 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
-    protected $table = 'users'; // Nama tabel
-    protected $primaryKey = 'id'; // Gunakan user_id sebagai primary key
-    public $timestamps = true; // Sesuai struktur database
+     protected $table = 'users'; // Nama tabel di database
+    protected $primaryKey = 'id_user'; // Sesuaikan dengan nama kolom primary key di tabel
 
-    protected $fillable = ['name', 'email', 'password', 'role'];
+    protected $fillable = [
+    'nama',
+    'kode',
+    'id_jurusan',
+    'email',
+    'password',
+    'role',
+    'no_telp',
+    'no_ktp',
+];
+
 
     /**
      * The attributes that should be hidden for serialization.
@@ -45,4 +54,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function catatans()
+{
+    return $this->hasMany(Catatan::class, 'id_user', 'id_user');
+}
+
 }
