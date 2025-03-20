@@ -5,11 +5,13 @@
 
 <div class="bg-white p-6 rounded-lg shadow-md">
     <h2 class="text-2xl font-bold mb-4">Daftar User</h2>
-    {{-- <div class="mb-4">
-        <a href="{{ route('areas.create') }}" class="bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded">
+    <div class="mb-4">
+        <a href="{{ route('catatan.create') }}" class="bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded">
             Tambah
         </a>
-    </div> --}}
+    </div>
+
+
 
     <!-- Table -->
     <div class="overflow-x-auto">

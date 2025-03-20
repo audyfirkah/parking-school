@@ -40,6 +40,8 @@ Route::put('/area/{id}', [AreaController::class, 'update'])->name('areas.update'
 Route::delete('/area/{id}', [AreaController::class, 'destroy'])->name('areas.destroy');
 
 Route::get('/catatan', [CatatanController::class, 'index'])->name('catatan.index');
+Route::get('/catatan/create', [CatatanController::class, 'create'])->name('catatan.create');
+Route::post('/catatan', [CatatanController::class, 'scan'])->name('catatan.scan');
 
 
 
